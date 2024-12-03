@@ -1,5 +1,6 @@
 import { alunos } from "./alunos.mjs";
 import { calcular } from "./calc.mjs";
+const infor = document.querySelector("#infor")
 
 let i = 0;
 alunos.forEach( alunos =>{
@@ -14,6 +15,12 @@ alunos.forEach( alunos =>{
     
 
 }
-console.log(alunos)
+
 })
-    
+
+const htmlMaterias = Object.keys(alunos[0].notas).map(materias =>{
+ 
+  return "<td>"+ materias +"</td>"
+}).join("         ")
+
+infor.innerHTML = htmlMaterias
