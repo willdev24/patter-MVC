@@ -21,6 +21,6 @@ alunos.forEach( alunos =>{
 const htmlMaterias = Object.keys(alunos[0].notas).map(materias =>{
  
   return "<td>"+ materias +"</td>"
-}).join("         ")
+}).join(" ")
 
-infor.innerHTML = htmlMaterias
+infor.innerHTML += htmlMaterias
