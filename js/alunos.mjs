@@ -3,10 +3,10 @@ export const alunos = [
         _id:0,
         nome:"chico melato",
         notas:{
-            portuques:[5,6,4,8,],
-            matematica:[7,8,9,4],
-            historia:[8,9,6,5],
-            ciencia:[1,2,3,4],
+            PORTUGUES:[5,5,5,5],
+            MATEMATICA:[6,6,6,6],
+            HISTORIA:[9,9,9,9],
+            CIENCIAS:[1,2,5,9],
         },
     
          
@@ -15,22 +15,47 @@ export const alunos = [
         _id:1,
         nome:"willy thiago",
         notas:{
-            portuques:[5,5,5,5],
-            matematica:[6,6,6,6],
-            historia:[9,9,9,9],
-            ciencia:[1,2,5,9],
+            PORTUGUES:[5,5,5,5],
+            MATEMATICA:[6,6,6,6],
+            HISTORIA:[9,9,9,9],
+            CIENCIAS:[1,2,5,9],
         },
     
          
     },
     {
         _id:2,
-        nome:"willy thiago",
+        nome:"willy",
         notas:{
             portuques:[10,9,8,4],
             matematica:[5,6,3,4],
             historia:[7,9,8,9],
             ciencia:[10,2,5,9],
+        },
+    
+         
+    },
+    {
+        _id:3,
+        nome:"Gabriela ",
+        notas:{
+            portuques:[10,9,8,4],
+            matematica:[5,6,3,4],
+            historia:[7,9,8,9],
+            ciencia:[10,2,5,9],
+        },
+    
+         
+    },
+    
+    {
+        _id:4,
+        nome:"Gabriela Xavier ",
+        notas:{
+            portuques:[10,7,8,4],
+            matematica:[5,7,3,4],
+            historia:[7,9,7,9],
+            ciencia:[10,7,7,9],
         },
     
          
