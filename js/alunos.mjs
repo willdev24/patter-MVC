@@ -59,6 +59,18 @@ export const alunos = [
         },
     
          
+    },
+    {
+        _id:4,
+        nome:"Mencia alice  ",
+        notas:{
+            portuques:[10,10,8,4],
+            matematica:[10,7,3,4],
+            historia:[7,10,7,9],
+            ciencia:[10,10,7,9],
+        },
+    
+         
     }
 ]
 

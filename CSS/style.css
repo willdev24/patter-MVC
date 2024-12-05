@@ -8,8 +8,89 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
+header{
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(198, 7, 7, 0.867);
+}
+h1{
+    font-size: 55px;
+}
+#dados{
+  
+    width: 55vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(198, 7, 7, 0.867);
+    color: antiquewhite;
+    font-size: 25px;
+    height: 7vh;
+    
+}
+
+
+#inp{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+#inp label{
+    margin-left: 20px;
+    position:sticky;
+    height: 5vh;
+   color: #00ff11;
+   
+}
+
+#adds{
+    background-color: rgba(189, 182, 182, 0.925);
+    height: 10%;
+}
+
+#adds form{
+    position: relative;
+    display: flex;
+    justify-content:safe;
+    margin-top: 20px;
+    width: 55vw;
+    font-size: 15px;
+    height: 7vh;
+}
+input{
+    margin-top: 10px;
+    padding: 7px 40px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border: 0;
+    background: transparent;
+    border-bottom: 1.5px solid #00ff11;
+
+}
+
+button{
+    position:sticky;
+    height: 4vh;
+    width: 2vw;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    margin-top: 25px;
+    font-size: 25px;
+    background-color: #00ff11;
+    color: #fff;
+}
+
+
+
 
 #pai{
     display: flex;
@@ -17,9 +98,10 @@ body {
     align-items: center;
     font-size: 30px;
     height: 60vh;
-    width: 65vw;
-    background-color: rgb(184, 235, 235);
-    
+    width: 55vw;
+    background-color: rgb(255, 255, 255);
+    border: 10px;
+    border-style:groove ;
 }
 
 thead,tbody{
@@ -45,5 +127,5 @@ tbody tr td{
 
 #nome{
     position: absolute;
-    margin-left: -30px;
+    margin-left: -25px;
 }
