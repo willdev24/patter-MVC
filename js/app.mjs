@@ -14,6 +14,7 @@ Html.innerHTML = "<td>nome</td>"
 Html.innerHTML += htmlMaterias
 infor.appendChild(Html)
 
+function render() {
 
 alunos.forEach( alunos =>{
 
@@ -30,8 +31,8 @@ Htmlnome.innerHTML = `<td id="nome">${alunos.nome}</td>`
 //media de cada alunos
    const notas =  Object.values(alunos.media).map( notas =>{ 
     const nots = notas.toFixed(2)
-    console.log(nots)
-    console.log(notas)
+    //console.log(nots)
+   // console.log(notas)
 
        return `<td>${nots}</td>`
    }).join("")
@@ -40,4 +41,36 @@ Htmlnome.innerHTML = `<td id="nome">${alunos.nome}</td>`
    inforAlunos.appendChild(Htmlnome)
 
 
-});
+})
+};
+
+render()
+
+//adicionar aluno 
+
+const formuario = document.querySelector("#formu")
+formuario.addEventListener("submit",function(e){
+
+  e.preventDefault()
+  const cadastro = document.forms["formu"].nomes.value
+  
+  const obj ={ 
+          _id:4,
+          nome:cadastro,
+          notas:{
+              portuques:[10,7,8,4],
+              matematica:[5,7,3,4],
+              historia:[7,9,7,9],
+              ciencia:[10,7,7,9],
+              },
+      }
+
+  alunos.push(
+    obj
+  )
+
+  inforAlunos.innerHTML =" "
+  render()
+
+
+})
