@@ -31,9 +31,7 @@ Htmlnome.innerHTML = `<td id="nome">${alunos.nome}</td>`
 //media de cada alunos
    const notas =  Object.values(alunos.media).map( notas =>{ 
     const nots = notas.toFixed(2)
-    //console.log(nots)
-   // console.log(notas)
-
+ 
        return `<td>${nots}</td>`
    }).join("")
 
@@ -74,3 +72,5 @@ formuario.addEventListener("submit",function(e){
 
 
 })
+
+console.log(alunos.length)
