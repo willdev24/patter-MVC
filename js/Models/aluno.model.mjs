@@ -1,21 +1,27 @@
-import { alunos } from "../alunos.mjs"
 
-
+import { calcular } from "../calc.mjs"
 
 //todas as operaçoes nos alunos, irao ser de responsabilidade de Services
-export default class alunoServices{
+export default class alunoModel{
      idds = 0
   
     constructor({nome,_id,notas} = {notas:{}}){
      this.nome = nome
-     this.id = _id !== undefined ? _id : this.generateID()
-        }
+     this.id = _id !== undefined ? _id : alunoModel.generateID()
+     this.notas = {...notas}
+     this.medias = {}
 
-        generateID(){
+      for(let notas in this.notas){//pego o nome de cada materia para tirar a media
+                this.medias[notas] = calcular(this.notas[notas]) 
+          }
+
+      }
+
+       static generateID(){ //responsavel por gerar um id 
           const quantidadedeAlunos = alunos.length 
 
           function gerar(quantidade){
-            const gerandoId = alunos.findIndex( itensID => itensID._id == quantidadedeAlunos)           
+            const gerandoId = alunos.findIndex( itensID => itensID._id == quantidade)           
             const etapaUm =  gerandoId !== -1 ? gerandoId + 1 : gerandoId;
             return etapaUm
           } 
@@ -40,4 +46,5 @@ export default class alunoServices{
 
         }
 
-}
+};
+
