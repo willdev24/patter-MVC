@@ -1,6 +1,6 @@
 export const alunos = [
     {
-        _id:6,
+        _id:0,
         nome:"chico melato",
         notas:{
             PORTUGUES:[5,5,5,5],
@@ -12,7 +12,7 @@ export const alunos = [
          
     },
     {
-        _id:69,
+        _id:1,
         nome:"willy thiago",
         notas:{
             PORTUGUES:[5,5,5,5],
@@ -24,19 +24,7 @@ export const alunos = [
          
     },
     {
-        _id:55,
-        nome:"willy",
-        notas:{
-            portuques:[10,9,8,4],
-            matematica:[5,6,3,4],
-            historia:[7,9,8,9],
-            ciencia:[10,2,5,9],
-        },
-    
-         
-    },
-    {
-        
+        _id:2,
         nome:"willy",
         notas:{
             portuques:[10,9,8,4],
@@ -48,18 +36,6 @@ export const alunos = [
          
     },
 
-    {
-        
-        nome:"Thiago Azaph ",
-        notas:{
-            portuques:[10,9,8,4],
-            matematica:[5,6,3,4],
-            historia:[7,9,8,9],
-            ciencia:[10,2,5,9],
-        },
-    
-         
-    }
 
 ]
 

@@ -1,6 +1,8 @@
 import { alunos } from "./alunos.mjs";
+import alunosController from "./controllers/alunos.controller.mjs";
 import alunoModel from "./Models/aluno.model.mjs";
 import alunoService from "./Services/aluno.services.mjs";
+import alunosViws from "./Views/alunos.views.mjs";
 const infor = document.querySelector("#infor")
 const inforAlunos = document.querySelector("#inforAluno")
 
@@ -14,27 +16,14 @@ alunos.forEach( alunos =>{
     
 })
 }
-
 render()
-console.log(alunoServici.alunos)
 
-/* contruir cabeçalho do programa
-const htmlMaterias = Object.keys(alunos[0].notas).map(materias =>{
-  return `<td>${materias}</td>`
-}).join(" ");
+const alunoWiew = new alunosViws(document.querySelector("[data-table-alunos]"))
 
-const Html = document.createElement("tr")
-Html.classList.add(".superior")
+const alunoControll = new alunosController(alunoServici, alunoWiew)
 
-Html.innerHTML = "<td>nome</td>"
-Html.innerHTML += htmlMaterias
-infor.appendChild(Html)
-*/
+  
 
-  /*
-const Htmlnome = document.createElement("tr")
-Htmlnome.innerHTML = `<td id="nome">${alunos.nome}</td>`
-*/      
 //pego o nome de cada materia para tirar a media
 
  

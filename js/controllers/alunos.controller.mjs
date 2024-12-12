@@ -2,6 +2,11 @@
 export default class alunosController{
     constructor(service,view){
 
+        this.service = service 
+        this.view = view
+
+        view.render(service.alunos)
     }
+
 
 }
