@@ -1,5 +1,7 @@
 
+import { alunos } from "../alunos.mjs"
 import { calcular } from "../calc.mjs"
+import alunoService from "../Services/aluno.services.mjs"
 
 //todas as operaçoes nos alunos, irao ser de responsabilidade de Services
 export default class alunoModel{
@@ -11,30 +13,39 @@ export default class alunoModel{
      this.notas = {...notas}
      this.medias = {}
 
+
       for(let notas in this.notas){//pego o nome de cada materia para tirar a media
                 this.medias[notas] = calcular(this.notas[notas]) 
           }
+
+
 
       }
 
        static generateID(){ //responsavel por gerar um id 
           const quantidadedeAlunos = alunos.length 
-
-          function gerar(quantidade){
-            const gerandoId = alunos.findIndex( itensID => itensID._id == quantidade)           
-            const etapaUm =  gerandoId !== -1 ? gerandoId + 1 : gerandoId;
+          console.log(alunos)
+        
+          function gerar(quantidade){ 
+            const gerandoId = alunos.find( itensID => itensID._id == quantidadedeAlunos  )   ///se nao achar um valor retorna undefined se achar retorna o obj
+            const id =  gerandoId !== undefined ? gerandoId._id : -1    
+            const etapaUm =  id !== -1 ? id + 1 : id;
             return etapaUm
-          } 
+          }; 
+const valorGerado = gerar(quantidadedeAlunos)
 
-         const valorGerado = gerar(quantidadedeAlunos)
+
+         if(valorGerado == -1 ){  
        
-         if(valorGerado == -1 ) return valorGerado
-         else{
-            const testar = Number
+          return quantidadedeAlunos
+        } else{
+            const testar = 0
             const contador = 1
+            console.log(valorGerado)
             do{
                 const testarValor = valorGerado + contador
-                const final = gerar(testarValor)
+               console.log(testarValor)
+                const final = gerar(testarValor) //errado
                 
                 testar = final
                 contador++

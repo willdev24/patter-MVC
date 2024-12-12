@@ -10,13 +10,13 @@ const alunoServici = new alunoService()
 function render(){
 alunos.forEach( alunos =>{
     const model = new alunoModel(alunos)
-      //console.log(model)
     alunoServici.add(model)
+    
 })
 }
 
 render()
-
+console.log(alunoServici.alunos)
 
 /* contruir cabeçalho do programa
 const htmlMaterias = Object.keys(alunos[0].notas).map(materias =>{
