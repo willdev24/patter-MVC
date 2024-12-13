@@ -25,18 +25,17 @@ export default class alunosViws{
     }
 
     render(alunos){
-
+       
         alunos.forEach( aluno => { 
-            const Htmlnome = document.createElement("tr")
-            Htmlnome.innerHTML = `<td id="nome">${aluno.nome}</td>`
-
-            const notas =  Object.values(aluno.media).map( notas =>{ 
-                const nots = notas.toFixed(2)
-                return `<td>${nots}</td>`
-            }).join("")
-            
-            Htmlnome.innerHTML += notas
-            inforAlunos.appendChild(Htmlnome)
+         let Htmlnome = document.createElement("tr")
+             Htmlnome.innerHTML = `<td id="nome">${aluno.nome}</td>`
+               
+               Object.values(aluno.medias).forEach(notas =>{
+                    const netas = notas.toFixed(2)
+                    Htmlnome.innerHTML += `<td>${netas}</td>`
+                })
+                
+          this.tableBody.appendChild(Htmlnome)
 
         });
     }
