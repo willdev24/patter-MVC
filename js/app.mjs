@@ -3,51 +3,30 @@ import alunosController from "./controllers/alunos.controller.mjs";
 import alunoModel from "./Models/aluno.model.mjs";
 import alunoService from "./Services/aluno.services.mjs";
 import alunosViws from "./Views/alunos.views.mjs";
-const infor = document.querySelector("#infor")
-const inforAlunos = document.querySelector("#inforAluno")
-
 
 const alunoServici = new alunoService()
 
-function render(){
-alunos.forEach( alunos =>{
-    const model = new alunoModel(alunos)
+function render(dados){
+  
+dados.forEach( aluno =>{
+    const model = new alunoModel(aluno)
     alunoServici.add(model)
-    
+
+    //localStorage.setItem("dados", JSON.stringify(alunoServici.alunos))
+
 })
 }
-render()
+render(alunos)
 
-const alunoWiew = new alunosViws(document.querySelector("[data-table-alunos]"))
+const alunoWiew = new alunosViws(document.querySelector("[data-table-alunos]")) //passo a tabela do html table la pro alunosViwer
 
-const alunoControll = new alunosController(alunoServici, alunoWiew)
-
-  
-
-//pego o nome de cada materia para tirar a media
-
- 
-
-
-
- 
-/*
-// renderizar media de cada alunos
-   const notas =  Object.values(alunos.media).map( notas =>{ 
-    const nots = notas.toFixed(2)
- 
-       return `<td>${nots}</td>`
-   }).join("")
-
-   Htmlnome.innerHTML += notas
-   inforAlunos.appendChild(Htmlnome)
-}
-
-render()
+function atualizar(){
+  const alunoControll = new alunosController(alunoServici, alunoWiew) //aq ele renderiza so alunos na tela
+  }
+atualizar()
 
 
 //adicionar aluno 
-
 const formuario = document.querySelector("#formu")
 formuario.addEventListener("submit",function(e){
 
@@ -55,26 +34,21 @@ formuario.addEventListener("submit",function(e){
   const cadastro = document.forms["formu"].nomes.value
   
   const obj ={ 
-          _id:4,
-          nome:cadastro,
-          notas:{
-              portuques:[10,7,8,4],
-              matematica:[5,7,3,4],
-              historia:[7,9,7,9],
-              ciencia:[10,7,7,9],
-              },
-      }
+    nome:cadastro,
+    notas:{
+        portuques:[10,7,8,4],
+        matematica:[5,7,3,4],
+        historia:[7,9,7,9],
+        ciencia:[10,7,7,9],
+        },
+}
 
-  alunos.push(
-    obj
-  )
-
-  inforAlunos.innerHTML =" "
-  render()
-
+  const neWmodel = new alunoModel(obj)
+  alunoServici.localStorag(neWmodel)
+  
+  atualizar()
+  //alunoControll.add(cadastro)
+//renderizar aluno
+  
 
 })
-
-console.log(alunos.length)
-
-*/

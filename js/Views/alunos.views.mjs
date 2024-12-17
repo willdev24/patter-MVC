@@ -26,6 +26,8 @@ export default class alunosViws{
 
     render(alunos){
        
+        this.tableBody.innerHTML = ""
+
         alunos.forEach( aluno => { 
          let Htmlnome = document.createElement("tr")
              Htmlnome.innerHTML = `<td id="nome">${aluno.nome}</td>`

@@ -2,11 +2,18 @@
 export default class alunosController{
     constructor(service,view){
 
-        this.service = service 
+        this.service = service.alunos
         this.view = view
 
         view.render(service.alunos)
     }
 
+    add(_nome, ){
+        console.log(_nome)
+        
+
+         
+
+    }
 
 }
