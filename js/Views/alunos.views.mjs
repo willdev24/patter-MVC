@@ -27,6 +27,7 @@ export default class alunosViws{
     render(alunos){
        
         this.tableBody.innerHTML = ""
+        //usar um condicional para pegar do local storage caso tenho dados salvos la 
 
         alunos.forEach( aluno => { 
          let Htmlnome = document.createElement("tr")
