@@ -12,19 +12,15 @@ dados.forEach( aluno =>{
     const model = new alunoModel(aluno)
     alunoServici.add(model)
 
-    //localStorage.setItem("dados", JSON.stringify(alunoServici.alunos))
+  //localStorage.setItem("dados", JSON.stringify(alunoServici.alunos))
 
 })
 }
 render(alunos)
 
 const alunoWiew = new alunosViws(document.querySelector("[data-table-alunos]")) //passo a tabela do html table la pro alunosViwer
-
-function atualizar(){
-  const alunoControll = new alunosController(alunoServici, alunoWiew) //aq ele renderiza so alunos na tela
-  }
-atualizar()
-
+const alunoControll = new alunosController(alunoServici, alunoWiew) //aq ele renderiza so alunos na tela
+  
 
 //adicionar aluno 
 const formuario = document.querySelector("#formu")
@@ -44,11 +40,10 @@ formuario.addEventListener("submit",function(e){
 }
 
   const neWmodel = new alunoModel(obj)
-  alunoServici.localStorag(neWmodel)
+ alunoServici.localStorag(neWmodel)
+ const controll = new alunosController(alunoServici, alunoWiew)
+ 
   
-  atualizar()
-  //alunoControll.add(cadastro)
-//renderizar aluno
-  
+ 
 
 })

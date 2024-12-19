@@ -10,8 +10,8 @@ export default class alunoService{
      add(aluno){
 
            if(!aluno instanceof alunoModel ) throw new Error("erooouuuuuuuuuuuuu");
-         // const listAtualizada = this.localStorag(aluno)
-          this.alunos.push(
+         
+         this.alunos.push(
                aluno
           )
      }

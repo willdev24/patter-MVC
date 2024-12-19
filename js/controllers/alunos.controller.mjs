@@ -8,9 +8,9 @@ export default class alunosController{
         view.render(service.alunos)
     }
 
-    add(_nome, ){
-        console.log(_nome)
-        
+    add(_aluno ){
+    
+        this.render(_aluno)
 
          
 
