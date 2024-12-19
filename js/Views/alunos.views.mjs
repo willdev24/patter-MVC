@@ -25,11 +25,14 @@ export default class alunosViws{
     }
 
     render(alunos){
-       
+       let opcoes = alunos
         this.tableBody.innerHTML = ""
+        const dadosDaWeb = localStorage.getItem("dados")
+        const strinWeb = JSON.parse(dadosDaWeb)
+        if(dadosDaWeb) opcoes = strinWeb
         //usar um condicional para pegar do local storage caso tenho dados salvos la 
 
-        alunos.forEach( aluno => { 
+        opcoes.forEach( aluno => { 
          let Htmlnome = document.createElement("tr")
              Htmlnome.innerHTML = `<td id="nome">${aluno.nome}</td>`
                
