@@ -29,15 +29,9 @@ e.preventDefault()
 
 
 
-  
+
   const obj ={ 
-    nome:cadastro,
-    notas:{
-        portuques:[null],
-        matematica:[null],
-        historia:[null],
-        ciencia:[null],
-        },
+    nome:cadastro
 }
 alunoControll.add( new alunoModel(obj))
 

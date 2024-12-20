@@ -14,17 +14,14 @@ export default class alunoModel{
      this.notas = {...notas}
      this.medias = {}
 
-
       for(let notas in this.notas){//pego o nome de cada materia para tirar a media
               /// console.log()
                 this.medias[notas] = calcular(this.notas[notas]) //armazeno valor das medias dentro de um obj 
                // console.log(this.medias)                         // cada vez que roda o lop notas ele armazena o as medias na materia especifica
-                                                                    // ex: primeira passada 
+     }                                                               // ex: primeira passada 
                                                                     // portugues: 7.75 . eai vai pro proximo loop ate chegar na ultima materia 
                                                                     // e por fim  vai pro proximo aluno depois de retornar a resposta pro app.mjs onde o mesmo salva os dados em service
-          };
-
-      }
+}
 
       
        static generateID(){ //responsavel por gerar um id 
@@ -59,10 +56,4 @@ export default class alunoModel{
                               }while(testar !== -1 )
                               return testar
 
-                            }
-                            
-
-      };
-
-};
-
+}}}

@@ -35,8 +35,10 @@ export default class alunosViws{
         opcoes.forEach( aluno => { 
          let Htmlnome = document.createElement("tr")
              Htmlnome.innerHTML = `<td id="nome">${aluno.nome}</td>`
-               
-               Object.values(aluno.medias).forEach(notas =>{
+               console.log(aluno.notas)
+             if(aluno.notas == {})  Htmlnome.innerHTML += `<td> adicionar notas</td>`
+
+             else  Object.values(aluno.medias).forEach(notas =>{
                     const netas = notas.toFixed(2)
                     Htmlnome.innerHTML += `<td>${netas}</td>`
                 })
