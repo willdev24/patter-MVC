@@ -11,21 +11,21 @@ export default class alunoService{
 
            if(!aluno instanceof alunoModel ) throw new Error("erooouuuuuuuuuuuuu");
          
-         this.alunos.push(
-               aluno
-          )
+          this.alunos.push(
+                    aluno
+               )
      }
 
      edit(aluno){
           return aluno
      }
 
-     localStorag(aluno){
-       
+     localStorag(alunostotal ,aluno){
           const local = localStorage.getItem("dados")
           const localstrin = JSON.parse(local)
           const obj = [aluno, ...localstrin] 
-          this.alunos.push(
+     
+     alunostotal.push(
                aluno
           )            
           localStorage.setItem("dados", JSON.stringify(obj))

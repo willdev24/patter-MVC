@@ -26,9 +26,8 @@ const alunoControll = new alunosController(alunoServici, alunoWiew) //aq ele ren
 const formuario = document.querySelector("#formu")
 formuario.addEventListener("submit",function(e){
 
-  e.preventDefault()
-  const cadastro = document.forms["formu"].nomes.value
-  
+e.preventDefault()
+  const cadastro = document.forms["formu"].nomes.value 
   const obj ={ 
     nome:cadastro,
     notas:{
@@ -38,12 +37,6 @@ formuario.addEventListener("submit",function(e){
         ciencia:[10,7,7,9],
         },
 }
-
-  const neWmodel = new alunoModel(obj)
- alunoServici.localStorag(neWmodel)
- const controll = new alunosController(alunoServici, alunoWiew)
- 
-  
- 
+alunoControll.add( new alunoModel(obj))
 
 })
