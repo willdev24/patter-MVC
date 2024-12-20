@@ -11,9 +11,7 @@ function render(dados){
 dados.forEach( aluno =>{
     const model = new alunoModel(aluno)
     alunoServici.add(model)
-
   //localStorage.setItem("dados", JSON.stringify(alunoServici.alunos))
-
 })
 }
 render(alunos)
@@ -28,15 +26,23 @@ formuario.addEventListener("submit",function(e){
 
 e.preventDefault()
   const cadastro = document.forms["formu"].nomes.value 
+
+
+
+  
   const obj ={ 
     nome:cadastro,
     notas:{
-        portuques:[10,7,8,4],
-        matematica:[5,7,3,4],
-        historia:[7,9,7,9],
-        ciencia:[10,7,7,9],
+        portuques:[null],
+        matematica:[null],
+        historia:[null],
+        ciencia:[null],
         },
 }
 alunoControll.add( new alunoModel(obj))
 
+location.href ="http://127.0.0.1:8080/"  
 })
+
+
+//editar aluno

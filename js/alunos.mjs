@@ -25,16 +25,17 @@ export const alunos = [
     },
     {
         _id:2,
-        nome:"willy",
+        nome:"Rhanyra",
         notas:{
-            portuques:[10,9,8,4],
-            matematica:[5,6,3,4],
-            historia:[7,9,8,9],
-            ciencia:[10,2,5,9],
+            PORTUGUES:[5,5,5,5],
+            MATEMATICA:[6,6,6,6],
+            HISTORIA:[9,9,9,9],
+            CIENCIAS:[1,2,5,9],
         },
     
          
     },
+  
 
 
 ]
